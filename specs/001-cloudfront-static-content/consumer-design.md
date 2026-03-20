@@ -3,7 +3,7 @@
 **Branch**: feat/001-cloudfront-static-content
 **Date**: 2026-03-20
 **Status**: Approved
-**Provider**: aws ~> 5.0
+**Provider**: aws ~> 6.0
 **Terraform**: >= 1.14
 **HCP Terraform Org**: hashi-demos-apj
 
@@ -216,11 +216,11 @@ provider "aws" {
 
 ## 5. Implementation Checklist
 
-- [ ] **A: Foundation files** -- Create `versions.tf`, `backend.tf`, `providers.tf`, and `variables.tf` with Terraform/HCP workspace settings, required providers, primary and aliased AWS providers, and all deployment inputs from Section 3.
-- [ ] **B: Shared wiring primitives** -- Create `locals.tf` and `data.tf` with naming locals, common tags, CloudFront alarm dimensions, alias record lists, and the IAM policy document that binds the OAI to the content bucket.
-- [ ] **C: Core delivery modules** -- Create `main.tf` with the `content_bucket`, `access_logs_bucket`, `acm_certificate`, and `cloudfront_distribution` module calls wired for private origin access, HTTPS, logging, and development-cost defaults.
-- [ ] **D: DNS and monitoring modules** -- Create `dns.tf` and `monitoring.tf` with the `dns_records`, `alarm_notifications`, `cf_4xx_alarm`, and `cf_5xx_alarm` module calls, including email subscriptions and CloudFront metric dimensions.
-- [ ] **E: Interface and operator documentation** -- Create `outputs.tf`, `README.md`, and `terraform.auto.tfvars.example` with the published outputs, deployment instructions, example input values, and validation workflow for the sandbox workspace.
+- [x] **A: Foundation files** -- Create `versions.tf`, `backend.tf`, `providers.tf`, and `variables.tf` with Terraform/HCP workspace settings, required providers, primary and aliased AWS providers, and all deployment inputs from Section 3.
+- [x] **B: Shared wiring primitives** -- Create `locals.tf` and `data.tf` with naming locals, common tags, CloudFront alarm dimensions, alias record lists, and the IAM policy document that binds the OAI to the content bucket.
+- [x] **C: Core delivery modules** -- Create `main.tf` with the `content_bucket`, `access_logs_bucket`, `acm_certificate`, and `cloudfront_distribution` module calls wired for private origin access, HTTPS, logging, and development-cost defaults.
+- [x] **D: DNS and monitoring modules** -- Create `dns.tf` and `monitoring.tf` with the `dns_records`, `alarm_notifications`, `cf_4xx_alarm`, and `cf_5xx_alarm` module calls, including email subscriptions and CloudFront metric dimensions.
+- [x] **E: Interface and operator documentation** -- Create `outputs.tf`, `README.md`, and `terraform.auto.tfvars.example` with the published outputs, deployment instructions, example input values, and validation workflow for the sandbox workspace.
 
 ---
 

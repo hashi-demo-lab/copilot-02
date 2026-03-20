@@ -1,0 +1,14 @@
+owner                     = "hashi-demo-lab"
+domain_name               = "cloudfrontcopilot-02.hashidemos.io"
+hosted_zone_name          = "hashidemos.io"
+subject_alternative_names = ["www.cloudfrontcopilot-02.hashidemos.io"]
+alarm_email_endpoints     = ["cloudfrontcopilot-02@hashidemos.io"]
+
+environment         = "dev"
+project_name        = "cloudfront-static-content"
+aws_region          = "ap-southeast-2"
+default_root_object = "index.html"
+price_class         = "PriceClass_100"
+
+alarm_4xx_error_rate_threshold = 5
+alarm_5xx_error_rate_threshold = 1
